@@ -8,19 +8,21 @@ const Blog = ({ data }) => {
 
   return (
     <Container>
-      <div>Welcome to my rant</div>
-      <div className="text-2xl font-semibold">All Posts</div>
+      <div className="text-2xl pb-3 font-semibold">All Posts</div>
       {posts.map(({ node }) => {
         const title = node.frontmatter.title
         const slug = node.slug
         return (
-          <Link to={slug}>
-            <div>
+          <li>
+            <Link to={slug} className="text-purple-600">
               {title}
-            </div>
-          </Link>
+            </Link>
+          </li>
         )
       })}
+      <div className="text-sm pt-3">
+        Browse by tag:
+      </div>
     </Container>
   )
 }
