@@ -1,5 +1,5 @@
 const siteMetadata = {
-    title: "Welcome to the corner of the Internet!",
+    title: "INSERT",
     author: {
         name: 'minminoo',
     },

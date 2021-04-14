@@ -1,5 +1,5 @@
-
 const path = require("path")
+const _ = require("lodash")
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
     const { createPage } = actions
@@ -17,6 +17,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
                     }
                 }
             }
+            tagsGroup: allMdx {
+                group(field: frontmatter___tags) {
+                    fieldValue
+                }
+            }
         }
     `)
 
@@ -26,11 +31,23 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
     const posts = result.data.allMdx.edges
 
+    // Create Page for each blog post
     posts.forEach(({ node }, index) => {
         createPage({
             path: `/blog/${node.slug}`,
             component: path.resolve(`./src/templates/blogPost.js`),
             context: { id: node.id },
+        })
+    })
+
+    const tags = result.data.tagsGroup.group
+
+    // Create Page for each tags
+    tags.forEach(tag => {
+        createPage({
+            path: `/tags/${tag.fieldValue}`,
+            component: path.resolve(`./src/templates/tags.js`),
+            context: { tag: tag.fieldValue },
         })
     })
 }

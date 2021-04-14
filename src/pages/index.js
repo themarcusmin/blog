@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
+import Helmet from "react-helmet"
 import Container from "../components/container"
 
 const Home = ({ data }) => {
@@ -18,38 +19,16 @@ const Home = ({ data }) => {
       }
     }
   `)
-  console.log(siteMetadata)
+
   return (
     <Container>
+      <Helmet title={siteMetadata.title} />
       <div className="bg-darken h-80 text-gray-200">
         <div className="line-1 anim-typewriter text-lg sm:text-sm">
           {siteMetadata.description}
         </div>
       </div>
     </Container>
-    // <div className="bg-darken h-screen text-gray-200">
-    //   {siteMetadata.title}
-    //   {siteMetadata.description}
-    //   <div className="line-1 anim-typewriter"></div>
-    /* <div className="mx-auto w-10/12 md:w-6/12">
-      <Navbar />
-      <hr className="my-6 border-gray-700" />
-      <div>Welcome to my rant</div>
-      <div className="text-2xl font-semibold">Recent Posts</div>
-      {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug;
-        return (
-          <div>
-            <h1>{title}</h1>
-            <p>{node.frontmatter.date}</p>
-            <p>{node.frontmatter.description}</p>
-          </div>
-        )
-      })}
-      <div>>>>Browse by Tag</div>
-    </div>
-    <Footer /> */
-    /* </div> */
   )
 }
 
