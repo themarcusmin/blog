@@ -1,66 +1,50 @@
-// const { createFilePath } = require("gatsby-source-filesystem")
-// const path = require("path")
 
-// exports.createPages = ({ actions, graphql }) => {
-//     const { createPage } = actions
+const path = require("path")
 
-//     return new Promise((resolve, reject) => {
-//         const blogPostTemplate = path.resolve("./src/templates/blogPost.js")
+exports.createPages = async ({ actions, graphql, reporter }) => {
+    const { createPage } = actions
 
-//         resolve(
-//             graphql(
-//                 `
-//                     allMdx {
-//                         edges {
-//                             node {
-//                                 frontmatter {
-//                                     title
-//                                 }
-//                             }
-//                         }
-//                     }
-//                 `
-//             )
-//         )
-//     })
+    const result = await graphql(`
+        {
+            allMdx(filter: {frontmatter: {published: {eq: true}}}) {
+                edges {
+                    node {
+                        id
+                        slug
+                        frontmatter {
+                            title
+                        }
+                    }
+                }
+            }
+        }
+    `)
 
+    if (result.errors) {
+        reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
+    }
 
-//     return graphql(`
-//     {
-//         allMdx (
-//             sort: {order: DESC, fields: [frontmatter___date]}
-//             filter: {frontmatter: {published: {eq: true}}}
-//         ) {
-//             nodes {
-// 			    fields {
-//                     slug
-//                 }
-//                 frontmatter {
-//       	            title
-//                 }
-//             }
-//         }
-//     }
-//     `).then((result) => {
-//         if (result.errors) {
-//             throw result.errors
-//         }
+    const posts = result.data.allMdx.edges
 
-//         const posts = result.data.AllMdx.nodes
-//         posts.forEach((post, index) => {
-//             const previous = index === post.length - 1 ? null : post[index + 1]
-//             const next = index === 0 ? null : post[index - 1]
-//             createPage({
-//                 path: post.fields.slug,
-//                 component: blogPostTemplate,
-//                 context: {
-//                     slug: post.fields.slug,
-//                     previous,
-//                     next
-//                 }
-//             })
-//         })
-//     })
-// }
+    posts.forEach(({ node }, index) => {
+        createPage({
+            path: `/blog/${node.slug}`,
+            component: path.resolve(`./src/templates/blogPost.js`),
+            context: { id: node.id },
+        })
+    })
+}
 
-// exports.onCreateNode = 
+const { createFilePath } = require(`gatsby-source-filesystem`)
+
+exports.onCreateNode = ({ node, actions, getNode }) => {
+    const { createNodeField } = actions
+    if (node.internal.type === "Mdx") {
+        const value = createFilePath({ node, getNode })
+        createNodeField({
+            name: "slug",
+            node,
+            value: `/blog${value}`,
+        })
+    }
+}

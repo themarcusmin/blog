@@ -2066,6 +2066,39 @@ exports.onRenderBody = onRenderBody;
 
 /***/ }),
 
+/***/ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/8767a00bd91fc0bf1ab1752a3cde94d7.js":
+/*!********************************************************************************************!*\
+  !*** ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/8767a00bd91fc0bf1ab1752a3cde94d7.js ***!
+  \********************************************************************************************/
+/***/ (() => {
+
+
+
+/***/ }),
+
+/***/ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/ba59c9b0e20c198a52a7aa8757b97e0a.js":
+/*!********************************************************************************************!*\
+  !*** ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/ba59c9b0e20c198a52a7aa8757b97e0a.js ***!
+  \********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _posts_first_post_shiprock_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../posts/first-post/shiprock.jpg */ "./posts/first-post/shiprock.jpg");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  shiprock: _posts_first_post_shiprock_jpg__WEBPACK_IMPORTED_MODULE_0__.default,
+  React: react__WEBPACK_IMPORTED_MODULE_1__
+});
+
+/***/ }),
+
 /***/ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js":
 /*!********************************************************************************************!*\
   !*** ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js ***!
@@ -2294,9 +2327,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-var scope_0 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js").default;
+var scope_0 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/8767a00bd91fc0bf1ab1752a3cde94d7.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/8767a00bd91fc0bf1ab1752a3cde94d7.js").default;
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Object.assign({}, scope_0));
+var scope_1 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/ba59c9b0e20c198a52a7aa8757b97e0a.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/ba59c9b0e20c198a52a7aa8757b97e0a.js").default;
+
+var scope_2 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js").default;
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Object.assign({}, scope_0, scope_1, scope_2));
 
 /***/ }),
 
@@ -6802,6 +6839,21 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./posts/first-post/shiprock.jpg":
+/*!***************************************!*\
+  !*** ./posts/first-post/shiprock.jpg ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "static/shiprock-64b9f797a34c0b77930e03fb8798fb48.jpg");
+
+/***/ }),
+
 /***/ "react-dom/server":
 /*!*************************************************************************!*\
   !*** external "C:\\21rising\\blog\\node_modules\\react-dom\\server.js" ***!
@@ -6901,6 +6953,11 @@ module.exports = require("C:\\21rising\\blog\\node_modules\\react\\index.js");;
 /******/ 			if (!module.children) module.children = [];
 /******/ 			return module;
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		__webpack_require__.p = "/";
 /******/ 	})();
 /******/ 	
 /************************************************************************/

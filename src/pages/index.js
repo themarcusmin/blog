@@ -21,7 +21,7 @@ const Home = ({ data }) => {
   console.log(siteMetadata)
   return (
     <Container>
-      <div className="bg-darken h-full text-gray-200">
+      <div className="bg-darken h-80 text-gray-200">
         <div className="line-1 anim-typewriter text-lg sm:text-sm">
           {siteMetadata.description}
         </div>
