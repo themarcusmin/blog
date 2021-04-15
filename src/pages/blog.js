@@ -20,7 +20,7 @@ const Blog = ({ data }) => {
         const slug = node.slug
         return (
           <li key={slug}>
-            <Link to={`/blog/${slug}`} className="text-purple-600">
+            <Link to={`/blog/${slug}`} className="text-blue-700 font-medium dark:text-yellow-200">
               {title}
             </Link>
           </li>

@@ -14,8 +14,8 @@ const BlogPost = ({ data: { mdx, site } }) => {
   return (
     <Container>
       <Helmet title={`${title} | ${postTitle}`} />
-      <div>{mdx.frontmatter.date}</div>
-      <div>{postTitle}</div>
+      <div className="text-3xl font-black">{postTitle}</div>
+      <div className="text-xs text-gray-500 py-2">Posted {mdx.frontmatter.date}</div>
       <MDXProvider components={shortcodes}>
         <MDXRenderer>{mdx.body}</MDXRenderer>
       </MDXProvider>
