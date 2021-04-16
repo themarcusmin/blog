@@ -2315,6 +2315,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _public_static_favicon_32x32_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../public/static/favicon-32x32.png */ "./public/static/favicon-32x32.png");
+
 
 
 function HTML(props) {
@@ -2328,6 +2330,10 @@ function HTML(props) {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta", {
     name: "viewport",
     content: "width=device-width, initial-scale=1, shrink-to-fit=no"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("link", {
+    rel: "shortcut icon",
+    type: "image/png",
+    href: _public_static_favicon_32x32_png__WEBPACK_IMPORTED_MODULE_2__.default
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("link", {
     rel: "preconnect",
     href: "https://fonts.gstatic.com"
@@ -6803,6 +6809,21 @@ if (false) {} else {
   module.exports = __webpack_require__(/*! ./cjs/react-is.development.js */ "./node_modules/react-is/cjs/react-is.development.js");
 }
 
+
+/***/ }),
+
+/***/ "./public/static/favicon-32x32.png":
+/*!*****************************************!*\
+  !*** ./public/static/favicon-32x32.png ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFYklEQVRYR8WXeVCTRxjGn/0CeDQIVEWBJGi9FeSQqyB4VTzwYqAoKFaDOFYFBW1t6ai1jG3toE5r60WkHjRM8baORWgZsB44itIBHfHiSPCoUIRQIUDydXaFzwQUtdLJ/pVk333fX3affXaX4BWbjY2NlVgsnkoIGQ/ADUA/ANYtwx8DKAVwlef57Lq6ulPV1dU1r5KavCzIwcFhMMdxawgh4QC6vSy+pb+e5/k0vV6/qaKi4mZHY14IIJFIuhFCEgkhsQDMX7Fw27Amnue/43l+rVqtrn9ejucCSCSSQRzHHQUw4j8Wbjvsml6vD1ar1bfadrQDcHR0dNfr9acJIb06qThLw/N8Jcdxk8rKyq4Y5jUCoP+cEHK+s4u3FqQQPM/7Gs6EAEDXnOO4S5047S+aQLocnq2aEACkUmkSIWRVZ077i3LxPL9ZpVKtpv0MgG41kUhU9AZqf13uJp1O50S3KAOQSqV7CCHy183yJvE8z6eoVKooQh3O0tLyvqHJrFnmCzenPnhS3wR5/Ml2dbp2McOAfjYwM+NQqnqMmlpthyy9e3aHna0YTc16lKlrWF4A9RqNxo5IpdJwQoiybYZ1cf4ImToULhOThS6RiEP8Ym+EBA1FXr4a9Q06+Ljbo+DaQ6xPykVtXaNRGi83eyTE+EGr1eFWyd+Q2FniXQ8J9h8qxMZvz9KtGUFkMhmtsKgtwJJId3w4f5QRwBerx2DyuAGYJT+Iew81bEgXCxFStkyHuRmHOUuPQq/n2e8BPjIkfxOEmLWnkZl7V0j/WawfosJd4RqoQK1Gq6AAlwGM6tv7LcyYNAQ9xBbIzSuH6/A+WL7QQwCQ2vdAzqFIfPX9OSiUBUa8I4fZ4viPYViWkIFT2bch4ghyDkfiSuEDrFiXaRT7jswa/WXW+P0sPbuQTwEq7fqIe57cNxvFd6qQmVvCplUstoDzEFsBYH6oMzasHoPpH/yMouJHRkk5QlCYvRhZZ+5i5foseLrYIX1XCOI/z8LRjOKO9FFFAZo/WeYrCpsxHL4z9qJB2wxCgOMpYXCUWAkAa1eOhnyOKzym7EFVdftzJTt9HjR1jZgpT0dEsBM2rhmLsCVHcKngXkcAOgaQtj1YRJUZteqZ4ulOiJg1QgBI/GgM5oU4w3ViMmo07VWfqYyATs9jyrw0BkqBg6MOMoG2NipKK8uuwvczeWUMoPLUgTk9b9yuQvyGLKGTCpAKsXUXxC32RqzcE/7B+6C+/1SAhu38iQUoKX+MucuPYdakwdi6IRAL4k4g90K5EObvLcWnMX4YNrAXtiZfxO6fCtgSXD6iCB314K86LE3IEIJXRnthYZiLADBhdH8okoKwMO4X5FwoMypuKbZAQWY0duzPR9LOPMgcrJB7OJJ9/mEv1fizFhvlibhobwzx34HGJh0TYfLXCeMXebvZY9z7qULkrk1T4ePuIACYm3PIORiJS3/eY0IzbHSp1q8KQGC4khkNbSlbpmFQ/7cxeW4a/nnCjIe1GLkn85LBo7dTY1IwI3Jz6qs8tDsUOw/k49fsO/BwsUPQewPhNqIvJsxORXlFLRvs5WqPPZunQZFWgNQjhWhoaMZ4v35I/Hgsvtx2DuknrguFqPulbpuJ+oZmbNl9EdeKHzFxr4jyYlqiAI1NugjBigN8ZN3mh45kPpCRcxcX8tWInkvvnoBCeRXXb1ayz9TNaJzzMFuYiTjmcMpjRSi6Ybw1aSw1KeqmAT6O6N2rO7TaZpSqapB9rhS//VHy1IppoEkPIwpg8uO4ZRZMdyFha2vqK1kLhOkupa37x6TX8lYIkz5MDCBM9zQztFmTPU6NzB7A//U8/xfB3WK2DTiKIQAAAABJRU5ErkJggg==");
 
 /***/ }),
 

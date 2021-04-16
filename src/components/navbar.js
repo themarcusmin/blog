@@ -32,7 +32,7 @@ const Navbar = () => {
         <div className="pt-6">
             <div className="flex justify-between space-x-4">
                 <Link to="/">
-                    <div className="text-sm font-semibold dark:hover:text-yellow-200">minminoo</div>
+                    <div className="text-sm font-semibold dark:hover:text-yellow-200">doubleOG</div>
                 </Link>
                 <div className="flex space-x-4 text-sm font-semibold">
                     <Link to="/blog">

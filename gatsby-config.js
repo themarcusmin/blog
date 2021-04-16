@@ -1,7 +1,7 @@
 const siteMetadata = {
-    title: "INSERT",
+    title: "doubleOG",
     author: {
-        name: 'minminoo',
+        name: 'doubleOG',
     },
     description: 'Telling stories. One post at a time.',
     siteUrl: 'https://localhost:8000',
@@ -10,6 +10,18 @@ const siteMetadata = {
 module.exports = {
     siteMetadata,
     plugins: [
+        {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+                name: `doubleOG`,
+                short_name: `dOG`,
+                start_url: `/`,
+                background_color: `#f7f0eb`,
+                theme_color: `#a2466c`,
+                display: `standalone`,
+                icon: `public/static/android-chrome-512x512.png`
+            },
+        },
         {
             resolve: `gatsby-plugin-mdx`,
             options: {
