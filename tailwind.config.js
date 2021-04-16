@@ -7,8 +7,9 @@ module.exports = {
         'noto-serif': ['"Noto Serif SC"', 'serif']
       },
       colors: {
+        // #1C1C1C
         'darken': '#1C1C1C',
-        'darkGrey': '#121212',
+        'darkGrey': '#1E1E1E',
         'softDarken': '#282828',
       }
     },

@@ -15,7 +15,7 @@ export default function HTML(props) {
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300&display=swap" rel="stylesheet" />
         {props.headComponents}
       </head>
-      <body {...props.bodyAttributes} className="dark:bg-darkGrey dark:text-gray-300 dark:font-thin">
+      <body {...props.bodyAttributes} className="dark:bg-darkGrey dark:text-gray-300">
         {props.preBodyComponents}
         <div
           key={`body`}

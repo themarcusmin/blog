@@ -2335,7 +2335,7 @@ function HTML(props) {
     href: "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300&display=swap",
     rel: "stylesheet"
   }), props.headComponents), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("body", Object.assign({}, props.bodyAttributes, {
-    className: "dark:bg-darkGrey dark:text-gray-300 dark:font-thin"
+    className: "dark:bg-darkGrey dark:text-gray-300"
   }), props.preBodyComponents, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     key: `body`,
     id: "___gatsby",
