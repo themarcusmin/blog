@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import kebabCase from "lodash/kebabCase"
 import Seo from "../components/seo"
 import Container from "../components/container"
 
