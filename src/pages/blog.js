@@ -2,17 +2,16 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import kebabCase from "lodash/kebabCase"
-import Helmet from "react-helmet"
-
+import Seo from "../components/seo"
 import Container from "../components/container"
 
 const Blog = ({ data }) => {
   const posts = data.allMdx.edges
   const tags = data.tags.group
-  const title = data.site.siteMetadata.title
+
   return (
     <Container>
-      <Helmet title={`${title} | blog`} />
+      <Seo extraTitle="Blog" />
       {/* All Posts */}
       <div className="text-2xl pb-3 font-semibold">All Posts</div>
       {posts.map(({ node }) => {
@@ -59,11 +58,6 @@ export const postQuery = graphql`
       group(field: frontmatter___tags) {
         tag: fieldValue
         totalCount
-      }
-    }
-    site {
-      siteMetadata {
-        title
       }
     }
   }

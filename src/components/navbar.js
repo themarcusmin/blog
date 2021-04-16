@@ -1,18 +1,15 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect } from "react"
 import { Link } from "gatsby"
 
 const Navbar = () => {
-    const [darkMode, setDarkMode] = useState(false)
 
     function toggleDarkMode() {
         if (document.documentElement.classList.contains("dark")) {
             document.documentElement.classList.remove('dark')
             localStorage.theme = 'light'
-            setDarkMode(false)
         } else {
             document.documentElement.classList.add('dark')
             localStorage.theme = 'dark'
-            setDarkMode(true)
         }
     }
 

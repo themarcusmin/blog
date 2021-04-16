@@ -2,11 +2,9 @@ import React from "react"
 import { Link, graphql } from "gatsby";
 
 import kebabCase from "lodash/kebabCase"
-import Helmet from "react-helmet"
 
+import Seo from "../components/seo"
 import Container from "../components/container"
-
-
 
 const AllTags = ({
   data: {
@@ -18,7 +16,7 @@ const AllTags = ({
 }) => {
   return (
     <Container>
-      <Helmet title={`${title} | Tags`} />
+      <Seo extraTitle="Tags" />
       <div className="text-2xl pb-3 font-semibold">Tags</div>
       {group.map(tag => {
         return (

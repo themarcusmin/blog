@@ -1,10 +1,9 @@
 const siteMetadata = {
     title: "doubleOG",
-    author: {
-        name: 'doubleOG',
-    },
-    description: 'Telling stories. One post at a time.',
-    siteUrl: 'https://localhost:8000',
+    description: "Telling stories. One post at a time.",
+    author: "doubleOG",
+    siteUrl: `https://localhost:8000`,
+    keywords: ["Gatsby Blog", "Gatsby MDX"]
 }
 
 module.exports = {
@@ -35,7 +34,7 @@ module.exports = {
                 name: `post`,
             }
         },
-        'gatsby-plugin-postcss',
+        `gatsby-plugin-postcss`,
         `gatsby-plugin-image`,
         `gatsby-plugin-sharp`,
         `gatsby-transformer-sharp`,
