@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-tags-js","path":"/tags/first","result":{"data":{"allMdx":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/blog/first-post/"},"frontmatter":{"title":"First Post"}}}]}},"pageContext":{"tag":"first"}},"staticQueryHashes":["2052298874"]}

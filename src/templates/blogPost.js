@@ -11,6 +11,7 @@ const shortcodes = { Link }
 const BlogPost = ({ data: { mdx, site } }) => {
   const postTitle = mdx.frontmatter.title
   const excerpt = mdx.frontmatter.excerpt
+  const tags = mdx.frontmatter.tags
 
   return (
     <Container>
@@ -20,6 +21,16 @@ const BlogPost = ({ data: { mdx, site } }) => {
       <MDXProvider components={shortcodes}>
         <MDXRenderer>{mdx.body}</MDXRenderer>
       </MDXProvider>
+      <div className="flex flex-row text-xs italic pt-2">
+        <div className="pr-1">Tagged with</div>
+        {tags.map((tag, index) => {
+          return (
+            <Link to={`/tags/${tag}`} className="underline pr-1">
+              {`${tag}${index === tags.length - 1 ? "" : ", "}`}
+            </Link>
+          )
+        })}
+      </div>
     </Container>
   )
 }
@@ -35,6 +46,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM D YYYY")
+        tags
       }
     }
   }
