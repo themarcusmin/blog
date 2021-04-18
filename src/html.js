@@ -4,7 +4,7 @@ import favicon from "./images/favicon-32x32.png"
 
 export default function HTML(props) {
   return (
-    <html {...props.htmlAttributes} className="dark">
+    <html {...props.htmlAttributes} lang="en" className="dark">
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />

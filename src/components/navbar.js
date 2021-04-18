@@ -29,7 +29,7 @@ const Navbar = () => {
           <Link to="/about">
             <div className={`${theme === "light" ? "uline line-color hover:animate-uline" : "uline line-color-dark hover:animate-uline dark:hover:text-yellow-200"}`}>About</div>
           </Link>
-          <button className="focus:outline-none" onClick={() => handleThemeToggle()}>
+          <button className="focus:outline-none" onClick={() => handleThemeToggle()} aria-label="toggle dark mode">
             {
               theme === "light" ? (
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
