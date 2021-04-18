@@ -25,7 +25,7 @@ const BlogPost = ({ data: { mdx, site } }) => {
         <div className="pr-1">Tagged with</div>
         {tags.map((tag, index) => {
           return (
-            <Link to={`/tags/${tag}`} className="underline pr-1">
+            <Link to={`/tags/${tag}`} className="underline pr-1 text-blue-600 dark:text-blue-400">
               {`${tag}${index === tags.length - 1 ? "" : ", "}`}
             </Link>
           )

@@ -24,6 +24,8 @@ export default function HTML(props) {
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes} className="dark:bg-darkGrey dark:text-gray-300">
+        <script>
+        </script>
         {props.preBodyComponents}
         <div
           key={`body`}

@@ -1,32 +1,19 @@
-import React, { useState, useEffect } from "react"
+import React, { useContext } from "react"
 import { Link } from "gatsby"
 
+import { ThemeContext } from "../context/themeContext"
+
 const Navbar = () => {
-    const [darkMode, setDarkMode] = useState(false)
-    function toggleDarkMode() {
-        if (document.documentElement.classList.contains("dark")) {
-            document.documentElement.classList.remove('dark')
-            localStorage.theme = 'light'
-            setDarkMode(false)
-        } else {
-            document.documentElement.classList.add('dark')
-            localStorage.theme = 'dark'
-            setDarkMode(true)
-        }
-    }
+    const { theme, setTheme } = useContext(ThemeContext)
 
-    useEffect(() => {
-        if (localStorage.theme === "light") {
-            setDarkMode(false)
-            document.documentElement.classList.remove('dark')
-        } else {
-            setDarkMode(true)
+    const handleThemeToggle = () => {
+        if (theme === "light") {
             document.documentElement.classList.add('dark')
+            setTheme("dark")
+        } else {
+            document.documentElement.classList.remove('dark')
+            setTheme("light")
         }
-    }, [])
-
-    const cssHover = () => {
-        return localStorage.theme === "dark" ? "uline line-color-dark hover:animate-uline dark:hover:text-yellow-200" : "uline line-color hover:animate-uline"
     }
 
     return (
@@ -37,17 +24,19 @@ const Navbar = () => {
                 </Link>
                 <div className="flex space-x-4 text-sm font-semibold">
                     <Link to="/blog">
-                        <div className={cssHover()}>Blog</div>
+                        <div>Blog</div>
                     </Link>
                     <Link to="/about">
-                        <div className={cssHover()}>About</div>
+                        <div>About</div>
                     </Link>
-                    <button className="focus:outline-none" onClick={() => toggleDarkMode()}>
-                        {localStorage.theme === "dark" || darkMode ? (
-                            <svg className="w-6 h-6 dark:hover:text-yellow-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
-                        ) : (
+                    <button className="focus:outline-none" onClick={() => handleThemeToggle()}>
+                        {
+                            theme === "light" ? (
                                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
-                            )}
+                            ) : (
+                                    <svg className="w-6 h-6 dark:hover:text-yellow-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                                )
+                        }
                     </button>
                 </div>
             </div>
