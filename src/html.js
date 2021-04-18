@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import favicon from "../public/static/favicon-32x32.png"
+import favicon from "./images/favicon-32x32.png"
 
 export default function HTML(props) {
   return (

@@ -65,3 +65,13 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         })
     }
 }
+
+// Fix bug for react@17 => ReferenceError: React is not defined
+exports.onCreateBabelConfig = ({ actions }) => {
+    actions.setBabelPlugin({
+        name: '@babel/plugin-transform-react-jsx',
+        options: {
+            runtime: 'automatic',
+        },
+    });
+};
