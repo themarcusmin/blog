@@ -24,10 +24,10 @@ const Navbar = () => {
                 </Link>
                 <div className="flex space-x-4 text-sm font-semibold">
                     <Link to="/blog">
-                        <div>Blog</div>
+                        <div className={`${theme === "light" ? "uline line-color hover:animate-uline" : "uline line-color-dark hover:animate-uline dark:hover:text-yellow-200"}`}>Blog</div>
                     </Link>
                     <Link to="/about">
-                        <div>About</div>
+                        <div className={`${theme === "light" ? "uline line-color hover:animate-uline" : "uline line-color-dark hover:animate-uline dark:hover:text-yellow-200"}`}>About</div>
                     </Link>
                     <button className="focus:outline-none" onClick={() => handleThemeToggle()}>
                         {
