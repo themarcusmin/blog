@@ -21,7 +21,7 @@ const Container = ({ children }) => {
     }
 
     return (
-        <div className="mx-auto h-full w-10/12 md:w-5/12 flex flex-col font-noto-serif">
+        <div className="mx-auto h-full w-10/12 md:w-5/12 flex flex-col font-noto-serif text-sm">
             <Navbar />
             <div className="mb-auto flex-grow h-full">
                 {children}
