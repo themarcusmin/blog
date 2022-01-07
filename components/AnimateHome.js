@@ -1,4 +1,4 @@
-import styles from "./AnimateHome.module.css";
+import styles from "../styles/AnimateHome.module.css";
 
 export default function AnimateHome() {
   return (
