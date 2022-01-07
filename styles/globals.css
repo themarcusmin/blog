@@ -6,6 +6,34 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+body,
+body[data-theme="light"] {
+  --color-text-primary: black;
+  --color-underline: black;
+  --color-bg-primary: #fff;
+  --color-a: black;
+  --color-a-hover: #2563eb;
+}
+
+body[data-theme="dark"] {
+  --color-text-primary: #d1d5db;
+  --color-underline: #fde68a;
+  --color-bg-primary: #1e1e1e;
+  --color-a: #d1d5db;
+  --color-a-hover: #2563eb;
+}
+
+body {
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: "Poppins", sans-serif;
+  transition: background 0.25s ease-in-out;
+}
+
+::selection {
+  color: teal;
+}
+
 a {
   color: inherit;
   text-decoration: none;

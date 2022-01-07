@@ -1,0 +1,17 @@
+.container {
+  width: 88%;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    width: 65%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .container {
+    width: 42.5%;
+  }
+}

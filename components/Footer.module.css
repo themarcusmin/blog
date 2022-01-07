@@ -1,0 +1,23 @@
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1.5px solid var(--color-text-primary);
+  justify-content: center;
+  align-items: center;
+}
+
+.footer div {
+  display: flex;
+  gap: 0.5em;
+}
+
+.footer div a {
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--color-a);
+}
+
+.footer div a:hover {
+  color: var(--color-a-hover);
+}
