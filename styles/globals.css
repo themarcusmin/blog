@@ -13,7 +13,8 @@ body[data-theme="light"] {
   --color-a: black;
   --color-a-hover: #2563eb;
   --color-post: #1d4ed8;
-  --color-tag: #7c3aed;
+  --color-tag: #6e3dff;
+  --color-browse-all-tags: #6e3dff;
 }
 
 body[data-theme="dark"] {
@@ -24,6 +25,7 @@ body[data-theme="dark"] {
   --color-a-hover: #2563eb;
   --color-post: #fde68a;
   --color-tag: #fde68a;
+  --color-browse-all-tags: #a78bfa;
 }
 
 body {
@@ -45,6 +47,11 @@ a {
   box-sizing: border-box;
 }
 
-p {
+p,
+h3 {
   margin: 0;
+}
+
+h3 {
+  margin-bottom: 0.5em;
 }

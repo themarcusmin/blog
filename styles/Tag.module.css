@@ -1,0 +1,20 @@
+.header {
+  margin-top: 0;
+}
+
+.tag {
+  color: var(--color-tag);
+}
+
+.post {
+  color: var(--color-post-under-tag);
+}
+
+.browseAllTags {
+  color: var(--color-browse-all-tags);
+}
+
+.underline {
+  text-decoration: underline;
+  text-decoration-thickness: 0.05em;
+}
