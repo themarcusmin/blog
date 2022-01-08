@@ -1,39 +1,13 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
+import { getAllPostsWithFrontMatter } from "../../lib/posts";
+import { getAllTagsWithCount } from "../../lib/tags";
 
-export const getStaticProps = async () => {
-  const files = fs.readdirSync(path.join("posts"));
-  const posts = files.map((filename) => {
-    const markdownWithMeta = fs.readFileSync(
-      path.join("posts", filename),
-      "utf-8"
-    );
-    const { data: frontMatter } = matter(markdownWithMeta);
-    return {
-      frontMatter,
-      slug: filename.split(".")[0],
-    };
-  });
-
-  // sort posts by most recent date
-  const postsSortedByDate = posts.sort((a, b) => {
-    const beforeDate = new Date(a.frontMatter.date);
-    const afterDate = new Date(b.frontMatter.date);
-    return afterDate - beforeDate;
-  });
-
-  // count tags
-  const allTagsRaw = posts.map((post) => post.frontMatter.tags);
-  const allTagsConcat = Array.prototype.concat(...allTagsRaw);
-  const tags = {};
-  for (const tagName of allTagsConcat) {
-    tags[tagName] = tags[tagName] ? tags[tagName] + 1 : 1;
-  }
+const getStaticProps = async () => {
+  const posts = await getAllPostsWithFrontMatter();
+  const tags = await getAllTagsWithCount();
 
   return {
     props: {
-      posts: postsSortedByDate,
+      posts,
       tags,
     },
   };
@@ -42,7 +16,7 @@ export const getStaticProps = async () => {
 import styles from "../../styles/Blog.module.css";
 import Link from "next/link";
 
-export default function blogIndex({ posts, tags }) {
+function BlogIndex({ posts, tags }) {
   return (
     <>
       <h3 className={styles.allPosts}>All Posts</h3>
@@ -66,3 +40,6 @@ export default function blogIndex({ posts, tags }) {
     </>
   );
 }
+
+export { getStaticProps };
+export default BlogIndex;
