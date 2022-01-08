@@ -1,5 +1,41 @@
-.header {
-  font-size: larger;
-  padding-bottom: 1em;
-  font-weight: semibold;
+.allPosts {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.postTitle a {
+  color: var(--color-post);
+}
+
+.allTags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.allTags div:first-child {
+  text-decoration: none;
+}
+
+.allTags a {
+  text-decoration: underline;
+}
+
+.blogTitle {
+  margin: 0;
+}
+
+.date {
+  font-size: small;
+  color: gray;
+}
+
+.taggedWith {
+  font-size: small;
+}
+
+.taggedWith a {
+  text-decoration: underline;
+  color: var(--color-a-hover);
 }
