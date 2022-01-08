@@ -12,11 +12,15 @@ class MyDocument extends Document {
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           {/* eslint-disable-next-line react/no-unknown-property */}
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
           <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap"
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="true"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap"
             rel="stylesheet"
-          ></link>
+          />
         </Head>
         <body>
           <Main />
