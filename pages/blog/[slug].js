@@ -28,12 +28,15 @@ function dateFormatter(dateString) {
   });
 }
 
+import Hyperlink from "../../components/Hyperlink";
+
 const ResponsiveImage = (props) => (
   <Image alt={props.alt} layout="responsive" {...props} />
 );
 
 const components = {
   img: ResponsiveImage,
+  Hyperlink,
 };
 
 const PostPage = ({ frontMatter: { title, date, tags }, mdxSource }) => {
