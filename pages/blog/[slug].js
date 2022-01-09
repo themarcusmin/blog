@@ -14,7 +14,9 @@ const getStaticPaths = async () => {
   return { paths, fallback: false };
 };
 
+import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "../../styles/Blog.module.css";
 import { MDXRemote } from "next-mdx-remote";
 
@@ -26,12 +28,23 @@ function dateFormatter(dateString) {
   });
 }
 
+const ResponsiveImage = (props) => (
+  <Image alt={props.alt} layout="responsive" {...props} />
+);
+
+const components = {
+  img: ResponsiveImage,
+};
+
 const PostPage = ({ frontMatter: { title, date, tags }, mdxSource }) => {
   return (
     <>
+      <Head>
+        <title>{`${title} | themarcusmin`}</title>
+      </Head>
       <h2 className={styles.blogTitle}>{title}</h2>
       <span className={styles.date}>{`Posted ${dateFormatter(date)}`}</span>
-      <MDXRemote {...mdxSource} />
+      <MDXRemote {...mdxSource} components={components} />
       <i className={styles.taggedWith}>
         {`Tagged with `}
         {tags.map((tag, index) => (

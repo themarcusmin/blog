@@ -47,11 +47,25 @@ a {
   box-sizing: border-box;
 }
 
-p,
-h3 {
+p {
   margin: 0;
 }
 
-h3 {
-  margin-bottom: 0.5em;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.5em 0;
+}
+
+.tip {
+  margin: 0.75em;
+  font-size: medium;
+  font-style: italic;
+}
+
+.hyperlink {
+  color: #2563eb;
 }

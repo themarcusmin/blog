@@ -14,11 +14,15 @@ const getStaticProps = async () => {
 };
 
 import styles from "../../styles/Blog.module.css";
+import Head from "next/head";
 import Link from "next/link";
 
 function BlogIndex({ posts, tags }) {
   return (
     <>
+      <Head>
+        <title>Blog | themarcusmin</title>
+      </Head>
       <h3 className={styles.allPosts}>All Posts</h3>
       {/* All Posts */}
       {posts.map((post) => (
