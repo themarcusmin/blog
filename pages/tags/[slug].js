@@ -21,13 +21,16 @@ const getStaticPaths = async () => {
   return { paths, fallback: false };
 };
 
+import Head from "next/head";
 import Link from "next/link";
 import styles from "../../styles/Tag.module.css";
 
 const TagPage = ({ posts, slug }) => {
-  console.log({ posts });
   return (
     <>
+      <Head>
+        <title>{`Tags x ${slug} | themarcusmin`}</title>
+      </Head>
       <h3>{`${posts.length} post${
         posts.length > 1 ? "s" : ""
       } tagged with "${slug}"`}</h3>

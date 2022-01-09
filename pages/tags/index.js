@@ -10,12 +10,16 @@ const getStaticProps = async () => {
   };
 };
 
+import Head from "next/head";
 import Link from "next/link";
 import styles from "../../styles/Tag.module.css";
 
 function TagIndex({ tags }) {
   return (
     <>
+      <Head>
+        <title>Tags | themarcusmin</title>
+      </Head>
       <h3 className={styles.header}>Tags</h3>
       {Object.entries(tags).map(([tag, count]) => (
         <li key={tag}>
