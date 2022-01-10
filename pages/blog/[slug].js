@@ -16,7 +16,6 @@ const getStaticPaths = async () => {
 
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
 import styles from "../../styles/Blog.module.css";
 import { MDXRemote } from "next-mdx-remote";
 
@@ -28,11 +27,8 @@ function dateFormatter(dateString) {
   });
 }
 
+import ResponsiveImage from "../../components/ResponsiveImage";
 import Hyperlink from "../../components/Hyperlink";
-
-const ResponsiveImage = (props) => (
-  <Image alt={props.alt} layout="responsive" {...props} />
-);
 
 const components = {
   img: ResponsiveImage,
